@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>יצירת קשר | שק״ל</title>
+  <meta name="description" content="יצירת קשר עם שק״ל – שילוב קהילתי לאנשים עם מוגבלויות. טלפון, דוא״ל, כתובת, טופס פנייה ומשרות דרושים." />
+  <meta name="theme-color" content="#0d7377" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/logo.svg" />
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="מיקום">
+          <a href="index.html">דף הבית</a><span aria-hidden="true">/</span><span>יצירת קשר</span>
+        </nav>
+        <h1>נשמח לשמוע מכם/ן</h1>
+        <p class="page-hero__lead">
+          יש לכם שאלה, בקשה או רצון להצטרף ולתרום? צוות שק״ל כאן כדי להקשיב
+          ולכוון אתכם/ן ואת יקיריכם/ן למענה הנכון.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">פרטי התקשרות</p>
+          <h2 class="section-title" style="margin-bottom:24px">איך מגיעים אלינו</h2>
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+              <div><strong>כתובת המשרד הראשי</strong><span>רח׳ יד חרוצים 11, תלפיות, ירושלים 9153002</span></div>
+            </div>
+            <div class="contact-info__item">
+              <span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <div><strong>טלפון</strong><a href="tel:+97226720157">02-6720157</a></div>
+            </div>
+            <div class="contact-info__item">
+              <span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <div><strong>דוא״ל</strong><a href="mailto:info@shekel.org.il">info@shekel.org.il</a></div>
+            </div>
+            <div class="contact-info__item">
+              <span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <div><strong>שעות פעילות</strong><span>א׳–ה׳, 08:00–16:00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h2 style="margin-bottom:6px">שלחו לנו הודעה</h2>
+          <p style="color:var(--muted);margin-bottom:20px">נחזור אליכם בהקדם האפשרי.</p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="c-name">שם מלא</label><input type="text" id="c-name" name="name" autocomplete="name" required /></div>
+              <div class="field"><label for="c-phone">טלפון</label><input type="tel" id="c-phone" name="phone" autocomplete="tel" /></div>
+            </div>
+            <div class="field" style="margin-block:16px"><label for="c-email">דוא״ל</label><input type="email" id="c-email" name="email" autocomplete="email" required placeholder="name@example.com" /></div>
+            <div class="field" style="margin-block-end:16px"><label for="c-subject">נושא הפנייה</label><input type="text" id="c-subject" name="subject" /></div>
+            <div class="field" style="margin-block-end:18px"><label for="c-msg">תוכן ההודעה</label><textarea id="c-msg" name="message" required></textarea></div>
+            <button type="submit" class="btn btn--donate btn--md" style="width:100%">שליחת הודעה</button>
+            <p class="newsletter__status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Careers -->
+    <section class="section section--tint" id="careers">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">דרושים</p>
+          <h2 class="section-title">בואו לעבוד במקום עם משמעות</h2>
+          <p class="section-sub">שק״ל היא בית מקצועי לאלפי עובדים ועובדות. אנחנו תמיד מחפשים/ות אנשים טובים שרוצים/ות להשפיע.</p>
+        </div>
+        <div class="cards-3">
+          <article class="region-card">
+            <h3>מדריכים ומלווים</h3>
+            <p>ליווי דיירים/ות ומשתתפים/ות במסגרות הדיור, התעסוקה והפנאי ברחבי הארץ.</p>
+          </article>
+          <article class="region-card">
+            <h3>אנשי טיפול</h3>
+            <p>פסיכולוגים, עובדים סוציאליים ומטפלים למרכזים הקליניים שלנו.</p>
+          </article>
+          <article class="region-card">
+            <h3>מטה ומינהלה</h3>
+            <p>תפקידי ניהול, כספים, משאבי אנוש וגיוס משאבים במשרד הראשי.</p>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:32px"><a class="btn btn--primary btn--md" href="mailto:jobs@shekel.org.il">שליחת קורות חיים</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

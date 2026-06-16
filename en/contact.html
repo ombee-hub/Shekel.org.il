@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | SHEKEL</title>
+  <meta name="description" content="Contact SHEKEL – Community Integration for People with Disabilities. Phone, email, address, contact form and career opportunities." />
+  <meta name="theme-color" content="#0e6f63" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="../images/logo.svg" />
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+        <h1>We'd love to hear from you</h1>
+        <p class="page-hero__lead">Have a question, a request, or want to join and support? The SHEKEL team is here to listen and guide you and your loved ones to the right solution.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact details</p>
+          <h2 class="section-title" style="margin-bottom:24px">How to reach us</h2>
+          <div class="contact-info">
+            <div class="contact-info__item"><span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><strong>Head office</strong><span>11 Yad Harutzim St., Talpiot, Jerusalem 9153002, Israel</span></div></div>
+            <div class="contact-info__item"><span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><strong>Phone</strong><a href="tel:+97226720157">+972-2-672-0157</a></div></div>
+            <div class="contact-info__item"><span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><strong>Email</strong><a href="mailto:info@shekel.org.il">info@shekel.org.il</a></div></div>
+            <div class="contact-info__item"><span class="contact-info__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><strong>Hours</strong><span>Sun–Thu, 08:00–16:00</span></div></div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h2 style="margin-bottom:6px">Send us a message</h2>
+          <p style="color:var(--muted);margin-bottom:20px">We'll get back to you as soon as possible.</p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="c-name">Full name</label><input type="text" id="c-name" name="name" autocomplete="name" required /></div>
+              <div class="field"><label for="c-phone">Phone</label><input type="tel" id="c-phone" name="phone" autocomplete="tel" /></div>
+            </div>
+            <div class="field" style="margin-block:16px"><label for="c-email">Email</label><input type="email" id="c-email" name="email" autocomplete="email" required placeholder="name@example.com" /></div>
+            <div class="field" style="margin-block-end:16px"><label for="c-subject">Subject</label><input type="text" id="c-subject" name="subject" /></div>
+            <div class="field" style="margin-block-end:18px"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+            <button type="submit" class="btn btn--donate btn--md" style="width:100%">Send message</button>
+            <p class="newsletter__status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="careers">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Careers</p><h2 class="section-title">Come work somewhere meaningful</h2><p class="section-sub">SHEKEL is a professional home to thousands of employees. We're always looking for great people who want to make an impact.</p></div>
+        <div class="cards-3">
+          <article class="region-card"><h3>Counselors &amp; support staff</h3><p>Supporting residents and participants in housing, employment and leisure settings nationwide.</p></article>
+          <article class="region-card"><h3>Care professionals</h3><p>Psychologists, social workers and therapists for our clinical centers.</p></article>
+          <article class="region-card"><h3>HQ &amp; administration</h3><p>Management, finance, HR and fundraising roles at the head office.</p></article>
+        </div>
+        <p style="text-align:center;margin-top:32px"><a class="btn btn--primary btn--md" href="mailto:jobs@shekel.org.il">Send your CV</a></p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/layout-en.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
