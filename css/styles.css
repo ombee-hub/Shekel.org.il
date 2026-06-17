@@ -41,8 +41,8 @@
   --cream-2:#f5efe6;
 
   /* typography */
-  --font-head: "Rubik", "Heebo", system-ui, sans-serif;
-  --font-body: "Heebo", "Rubik", system-ui, sans-serif;
+  --font-head: "Assistant", system-ui, sans-serif;
+  --font-body: "Assistant", system-ui, sans-serif;
   --fs-scale: 1; /* controlled by accessibility toolbar */
 
   /* shape & depth */
@@ -654,7 +654,8 @@ html.a11y-align-left main { text-align: left !important; }
   .header__join { display: none; }
   /* Hamburger on the right, next to the logo. The header donate button moves
      into the drawer so the mobile header stays clean (logo + hamburger). */
-  .header__actions .btn--donate { display: none; }
+  .header__actions .btn--donate,
+  .header__actions .lang-switch { display: none; }
   /* hamburger to the RIGHT of the logo: in RTL place the actions first
      (rightmost); in LTR they're already to the right of the left-aligned logo. */
   html[dir="rtl"] .header__actions { order: -1; margin-inline-start: 0; }
@@ -700,8 +701,21 @@ html.a11y-align-left main { text-align: left !important; }
    ========================================================= */
 
 /* ---- Top utility bar ---- */
-.topbar { background: var(--brand-900); color: rgba(255,255,255,.82); font-size: .85rem; }
+/* slim brand accent line — rendered as part of the (sticky) header so it
+   stays glued to the menu instead of scrolling away above it. */
+.site-header::before { content: ""; display: block; height: 7px; background: linear-gradient(90deg, var(--brand-600), var(--brand-800)); }
+.topbar { display: none; }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 38px; }
+/* header language switch (sits next to the donate button) */
+.lang-switch {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 13px; border-radius: 12px; white-space: nowrap;
+  border: 1.5px solid var(--brand-100); background: #fff;
+  color: var(--brand-700); font-family: var(--font-head); font-weight: 600; font-size: .9rem;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.lang-switch:hover { background: var(--brand-50); border-color: var(--brand-500); }
+.lang-switch__globe { width: 17px; height: 17px; flex-shrink: 0; }
 .topbar__phone { color: #fff; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
 .topbar__links { display: flex; gap: 4px; align-items: center; }
 .topbar__links a { color: rgba(255,255,255,.78); padding: 5px 11px; border-radius: 9px; transition: background-color .2s ease, color .2s ease; }

@@ -20,7 +20,8 @@
     { href: "news.html",       label: "News & Events",     key: "news" },
     { href: "branches.html",   label: "Where We Operate",  key: "branches" },
     { href: "businesses.html", label: "Social Enterprises", key: "businesses" },
-    { href: "contact.html",    label: "Contact",           key: "contact" }
+    { href: "contact.html",    label: "Contact",           key: "contact" },
+    { href: "contact.html#careers", label: "Careers",      key: "careers" }
   ];
 
   var page = document.body.getAttribute("data-page") || "home";
@@ -50,16 +51,8 @@
   var HEART = '<svg class="btn__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21C6 16.5 2 13 2 8.8 2 5.6 4.5 3.5 7.3 3.5c1.7 0 3.4.9 4.7 2.5 1.3-1.6 3-2.5 4.7-2.5C19.5 3.5 22 5.6 22 8.8 22 13 18 16.5 12 21z"/></svg>';
 
   /* ---------- Top utility bar ---------- */
-  var TOPBAR =
-    '<div class="topbar">' +
-      '<div class="container topbar__inner">' +
-        '<a class="topbar__phone" href="contact.html"><span aria-hidden="true">✆</span> +972-2-672-0157</a>' +
-        '<nav class="topbar__links" aria-label="Useful links">' +
-          '<a href="contact.html#careers">Careers</a>' +
-          '<a class="topbar__lang" href="../index.html" lang="he" hreflang="he"><svg class="topbar__globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>עברית</a>' +
-        '</nav>' +
-      '</div>' +
-    '</div>';
+  // Slim brand accent line, kept connected to the header below it.
+  var TOPBAR = '<div class="topbar" aria-hidden="true"></div>';
 
   /* ---------- Header ---------- */
   var HEADER =
@@ -77,10 +70,10 @@
           '<a class="btn btn--donate drawer-donate" href="donate.html">' + HEART + 'Donate</a>' +
           '<div class="drawer-utility">' +
             '<a class="drawer-lang" href="../index.html" lang="he" hreflang="he"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> עברית</a>' +
-            '<a href="contact.html#careers">Careers</a>' +
           '</div>' +
         '</nav>' +
         '<div class="header__actions">' +
+          '<a class="lang-switch" href="../index.html" lang="he" hreflang="he" aria-label="מעבר לעברית"><svg class="lang-switch__globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>עברית</a>' +
           '<a class="btn btn--donate btn--sm" href="donate.html">' + HEART + 'Donate</a>' +
           '<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"><span></span><span></span><span></span></button>' +
         '</div>' +
@@ -197,7 +190,7 @@
   document.body.insertBefore(skip, document.body.firstChild);
 
   var headerMount = document.getElementById("site-header");
-  if (headerMount) headerMount.outerHTML = TOPBAR + HEADER;
+  if (headerMount) headerMount.outerHTML = HEADER;
 
   var footerMount = document.getElementById("site-footer");
   if (footerMount) footerMount.outerHTML = FOOTER;
