@@ -59,11 +59,11 @@
     '<header class="site-header" id="siteHeader">' +
       '<div class="container header__inner">' +
         '<a class="logo" href="index.html" aria-label="SHEKEL – Community Integration for People with Disabilities, home">' +
-          '<img class="logo__img" src="../images/logo.svg" alt="" width="104" height="54" />' +
+          '<img class="logo__img" src="../images/logo-shekel.webp" alt="" width="104" height="54" />' +
         '</a>' +
         '<nav class="main-nav" id="mainNav" aria-label="Main navigation">' +
           '<div class="drawer-head">' +
-            '<img class="logo__img" src="../images/logo.svg" alt="SHEKEL" width="92" height="48" />' +
+            '<img class="logo__img" src="../images/logo-shekel.webp" alt="SHEKEL" width="92" height="48" />' +
             '<button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>' +
           '</div>' +
           '<ul>' + buildNav() + '</ul>' +
@@ -94,7 +94,7 @@
     '<footer class="site-footer">' +
       '<div class="container footer__grid">' +
         '<div class="footer__brand">' +
-          '<span class="logo logo--footer"><img class="logo__img" src="../images/logo.svg" alt="SHEKEL – Community Integration for People with Disabilities" width="124" height="64" /></span>' +
+          '<span class="logo logo--footer"><img class="logo__img" src="../images/logo-shekel.webp" alt="SHEKEL – Community Integration for People with Disabilities" width="124" height="64" /></span>' +
           '<p class="footer__about">We see the person. Building an inclusive community where everyone has a place, a voice and a future.</p>' +
           '<div class="footer__social" aria-label="Social media">' +
             '<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2.5V5.3c-.4-.05-1.6-.2-3-.2-3 0-5 1.8-5 5.1V13H6v3.5h2.5V24h3.5v-7.5h2.7l.4-3.5H12v-2.4c0-1 .3-1.6 1.9-1.6z"/></svg></a>' +

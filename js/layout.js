@@ -58,11 +58,11 @@
     '<header class="site-header" id="siteHeader">' +
       '<div class="container header__inner">' +
         '<a class="logo" href="index.html" aria-label="שק״ל – שילוב קהילתי לאנשים עם מוגבלויות, לעמוד הבית">' +
-          '<img class="logo__img" src="images/logo.svg" alt="" width="104" height="54" />' +
+          '<img class="logo__img" src="images/logo-shekel.webp" alt="" width="104" height="54" />' +
         '</a>' +
         '<nav class="main-nav" id="mainNav" aria-label="ניווט ראשי">' +
           '<div class="drawer-head">' +
-            '<img class="logo__img" src="images/logo.svg" alt="שק״ל" width="92" height="48" />' +
+            '<img class="logo__img" src="images/logo-shekel.webp" alt="שק״ל" width="92" height="48" />' +
             '<button class="drawer-close" id="drawerClose" aria-label="סגירת התפריט">&times;</button>' +
           '</div>' +
           '<ul>' + buildNav() + '</ul>' +
@@ -95,7 +95,7 @@
     '<footer class="site-footer">' +
       '<div class="container footer__grid">' +
         '<div class="footer__brand">' +
-          '<span class="logo logo--footer"><img class="logo__img" src="images/logo.svg" alt="שק״ל – שילוב קהילתי לאנשים עם מוגבלויות" width="124" height="64" /></span>' +
+          '<span class="logo logo--footer"><img class="logo__img" src="images/logo-shekel.webp" alt="שק״ל – שילוב קהילתי לאנשים עם מוגבלויות" width="124" height="64" /></span>' +
           '<p class="footer__about">רואים את האדם. בונים קהילה מכילה שבה לכל אחד יש מקום, קול ועתיד.</p>' +
           '<div class="footer__social" aria-label="רשתות חברתיות">' +
             '<a href="#" aria-label="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2.5V5.3c-.4-.05-1.6-.2-3-.2-3 0-5 1.8-5 5.1V13H6v3.5h2.5V24h3.5v-7.5h2.7l.4-3.5H12v-2.4c0-1 .3-1.6 1.9-1.6z"/></svg></a>' +
