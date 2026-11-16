@@ -655,7 +655,7 @@ html.a11y-align-left main { text-align: left !important; }
   /* Hamburger on the right, next to the logo. The header donate button moves
      into the drawer so the mobile header stays clean (logo + hamburger). */
   .header__actions .btn--donate,
-  .header__actions .lang-switch { display: none; }
+  .header__actions .lang-dd { display: none; }
   /* hamburger to the RIGHT of the logo: in RTL place the actions first
      (rightmost); in LTR they're already to the right of the left-aligned logo. */
   html[dir="rtl"] .header__actions { order: -1; margin-inline-start: 0; }
@@ -706,16 +706,34 @@ html.a11y-align-left main { text-align: left !important; }
 .site-header::before { content: ""; display: block; height: 7px; background: linear-gradient(90deg, var(--brand-600), var(--brand-800)); }
 .topbar { display: none; }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 38px; }
-/* header language switch (sits next to the donate button) */
-.lang-switch {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 9px 13px; border-radius: 12px; white-space: nowrap;
+/* header language dropdown — flag + menu (OMBee / Aviv standard) */
+.lang-dd { position: relative; }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; cursor: pointer;
+  padding: 8px 13px; border-radius: 12px; line-height: 1;
   border: 1.5px solid var(--brand-100); background: #fff;
   color: var(--brand-700); font-family: var(--font-head); font-weight: 600; font-size: .9rem;
   transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
-.lang-switch:hover { background: var(--brand-50); border-color: var(--brand-500); }
-.lang-switch__globe { width: 17px; height: 17px; flex-shrink: 0; }
+.lang-btn:hover, .lang-btn:focus-visible { background: var(--brand-50); border-color: var(--brand-500); color: var(--brand-700); }
+.lang-btn:focus-visible { outline: 2px solid var(--brand-500); outline-offset: 3px; }
+.lang-caret { flex: none; transition: transform .2s ease; }
+.lang-dd.open .lang-caret { transform: rotate(180deg); }
+.lang-menu {
+  display: none; position: absolute; inset-block-start: calc(100% + 10px); inset-inline-start: 0;
+  min-width: 172px; background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  overflow: hidden; box-shadow: 0 16px 36px rgba(9, 63, 71, .18); z-index: 320;
+}
+.lang-dd.open .lang-menu { display: block; }
+.lang-menu a {
+  display: flex; align-items: center; gap: 10px; padding: 11px 16px;
+  font-family: var(--font-head); font-size: .92rem; font-weight: 600; color: var(--ink);
+  text-decoration: none; transition: background-color .18s ease, color .18s ease;
+}
+.lang-menu a:hover { background: var(--brand-50); color: var(--brand-700); }
+.lang-menu a[aria-current="true"] { color: var(--brand-600); font-weight: 700; }
+.lang-flag { width: 20px; height: 13px; object-fit: cover; border-radius: 3px; box-shadow: 0 0 0 1px rgba(9, 63, 71, .14); flex: none; }
+.a11y-head-ico { width: 22px; height: 22px; vertical-align: -5px; flex: none; }
 .topbar__phone { color: #fff; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
 .topbar__links { display: flex; gap: 4px; align-items: center; }
 .topbar__links a { color: rgba(255,255,255,.78); padding: 5px 11px; border-radius: 9px; transition: background-color .2s ease, color .2s ease; }

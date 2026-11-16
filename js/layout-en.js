@@ -69,11 +69,20 @@
           '<ul>' + buildNav() + '</ul>' +
           '<a class="btn btn--donate drawer-donate" href="donate.html">' + HEART + 'Donate</a>' +
           '<div class="drawer-utility">' +
-            '<a class="drawer-lang" href="../index.html" lang="he" hreflang="he"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg> עברית</a>' +
+            '<a class="drawer-lang" href="../index.html" lang="he" hreflang="he"><img class="lang-flag" src="../images/flag-il.webp" width="20" height="13" alt="" /> עברית</a>' +
           '</div>' +
         '</nav>' +
         '<div class="header__actions">' +
-          '<a class="lang-switch" href="../index.html" lang="he" hreflang="he" aria-label="מעבר לעברית"><svg class="lang-switch__globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>עברית</a>' +
+          '<div class="lang-dd">' +
+            '<button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Choose language">' +
+              '<img class="lang-flag" src="../images/flag-uk.webp" width="20" height="13" alt="" /> English' +
+              '<svg class="lang-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>' +
+            '</button>' +
+            '<div class="lang-menu">' +
+              '<a href="#" aria-current="true"><img class="lang-flag" src="../images/flag-uk.webp" width="20" height="13" alt="" /> English</a>' +
+              '<a href="../index.html" lang="he" hreflang="he"><img class="lang-flag" src="../images/flag-il.webp" width="20" height="13" alt="" /> עברית</a>' +
+            '</div>' +
+          '</div>' +
           '<a class="btn btn--donate btn--sm" href="donate.html">' + HEART + 'Donate</a>' +
           '<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"><span></span><span></span><span></span></button>' +
         '</div>' +
@@ -131,7 +140,7 @@
         '</p>' +
         '<p class="footer__credit">Design &amp; development by' +
           '<a class="footer__credit-logo" href="https://ombee.co.il" target="_blank" rel="noopener noreferrer" aria-label="OMBee – design & development (opens in a new tab)">' +
-            '<img src="../images/ombee-logo.png" alt="OMBee – Graphic Design And UI/UX" />' +
+            '<img src="../images/ombee-logo.webp" alt="OMBee – Graphic Design And UI/UX" />' +
           '</a></p>' +
       '</div></div>' +
     '</footer>';
@@ -157,11 +166,11 @@
 
   var A11Y =
     '<button id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" title="Accessibility menu">' +
-      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="3.8" r="2.2" /><path d="M3.5 7.5c2.8 1 5.6 1.5 8.5 1.5s5.7-.5 8.5-1.5M12 9v5m0 0l-2.8 6.5M12 14l2.8 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>' +
+      '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><circle cx="12" cy="3.8" r="2.2" /><path d="M20.5 8.7c-2.6.7-5.5 1.1-8.5 1.1s-5.9-.4-8.5-1.1c-.5-.1-1 .2-1.1.7-.1.5.2 1 .7 1.1 2.3.6 4.7 1 7.2 1.1v3.6L7.5 21c-.2.5 0 1.1.5 1.3.5.2 1.1 0 1.3-.5L11.7 16h.6l2.4 5.8c.2.5.8.7 1.3.5.5-.2.7-.8.5-1.3L13.7 15v-3.5c2.5-.1 4.9-.5 7.2-1.1.5-.1.8-.6.7-1.1-.1-.5-.6-.8-1.1-.7z" /></svg>' +
       '<span class="sr-only">Open the accessibility menu</span>' +
     '</button>' +
     '<div id="a11y-panel" class="a11y-panel" role="dialog" aria-label="Accessibility settings" aria-modal="false" hidden>' +
-      '<div class="a11y-panel__head"><h2><span aria-hidden="true">♿</span> Accessibility</h2><button class="a11y-panel__close" id="a11y-close" aria-label="Close accessibility menu">&times;</button></div>' +
+      '<div class="a11y-panel__head"><h2><svg class="a11y-head-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="3.8" r="2.2"/><path d="M20.5 8.7c-2.6.7-5.5 1.1-8.5 1.1s-5.9-.4-8.5-1.1c-.5-.1-1 .2-1.1.7-.1.5.2 1 .7 1.1 2.3.6 4.7 1 7.2 1.1v3.6L7.5 21c-.2.5 0 1.1.5 1.3.5.2 1.1 0 1.3-.5L11.7 16h.6l2.4 5.8c.2.5.8.7 1.3.5.5-.2.7-.8.5-1.3L13.7 15v-3.5c2.5-.1 4.9-.5 7.2-1.1.5-.1.8-.6.7-1.1-.1-.5-.6-.8-1.1-.7z"/></svg> Accessibility</h2><button class="a11y-panel__close" id="a11y-close" aria-label="Close accessibility menu">&times;</button></div>' +
       '<div class="a11y-grid">' +
         aTile('contrast', 'High Contrast') +
         aTile('grayscale', 'Grayscale') +
@@ -201,4 +210,29 @@
 
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------- Language dropdown (flag menu) ---------- */
+  (function () {
+    var dd = document.querySelector(".lang-dd");
+    if (!dd) return;
+    var btn = dd.querySelector(".lang-btn");
+    var menu = dd.querySelector(".lang-menu");
+    if (!btn || !menu) return;
+    var items = menu.querySelectorAll("a");
+    function toggle(open) {
+      dd.classList.toggle("open", open);
+      btn.setAttribute("aria-expanded", String(open));
+      if (open && items.length) items[0].focus();
+    }
+    btn.addEventListener("click", function () { toggle(!dd.classList.contains("open")); });
+    Array.prototype.forEach.call(items, function (a) {
+      a.addEventListener("click", function (e) {
+        if (a.getAttribute("href") === "#") { e.preventDefault(); toggle(false); btn.focus(); }
+      });
+    });
+    document.addEventListener("click", function (e) { if (!dd.contains(e.target)) toggle(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && dd.classList.contains("open")) { toggle(false); btn.focus(); }
+    });
+  })();
 })();
