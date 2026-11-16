@@ -799,3 +799,17 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; color: var(--
   .main-nav .nav-sub a { padding-inline-start: 30px; font-size: 1rem; opacity: .9; }
   .nav-sub-toggle { width: 44px; height: 44px; flex-shrink: 0; }
 }
+
+/* =========================================================
+   Cookie banner (home page, first visit) — OMBee/Aviv standard
+   ========================================================= */
+.cookie-banner { position: fixed; inset-block-end: 0; inset-inline: 0; z-index: 9999; background: #fff; border-block-start: 2px solid var(--line); padding: 18px 32px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 -4px 24px rgba(9, 63, 71, .12); transform: translateY(100%); transition: transform .4s cubic-bezier(.4, 0, .2, 1); }
+.cookie-banner.show { transform: translateY(0); }
+.cookie-banner p { font-size: .9rem; color: var(--ink); font-weight: 500; margin: 0; text-align: center; line-height: 1.6; max-width: 760px; }
+.cookie-banner p a { color: var(--brand-600); font-weight: 700; text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-accept { background: linear-gradient(135deg, var(--brand-500), var(--brand-700)); color: #fff; border: none; padding: 11px 26px; border-radius: 12px; font-family: var(--font-head); font-weight: 700; font-size: .88rem; cursor: pointer; transition: transform .18s ease, opacity .18s ease; box-shadow: 0 4px 14px rgba(15, 125, 112, .3); }
+.cookie-accept:hover { opacity: .92; transform: translateY(-1px); }
+.cookie-reject { background: var(--cream); color: var(--muted); border: 1.5px solid var(--line); padding: 11px 26px; border-radius: 12px; font-family: var(--font-head); font-weight: 700; font-size: .88rem; cursor: pointer; transition: border-color .18s ease, color .18s ease; }
+.cookie-reject:hover { border-color: var(--brand-500); color: var(--ink); }
+@media (max-width: 820px) { .cookie-banner { padding: 16px 20px; gap: 14px; flex-direction: column; } }

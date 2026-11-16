@@ -235,4 +235,26 @@
       if (e.key === "Escape" && dd.classList.contains("open")) { toggle(false); btn.focus(); }
     });
   })();
+
+  /* ---------- Cookie banner (home page only, first visit) ---------- */
+  if (page === "home") {
+    var cookieBanner = document.createElement("div");
+    cookieBanner.className = "cookie-banner";
+    cookieBanner.id = "cookie-banner";
+    cookieBanner.innerHTML =
+      '<p><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-5px;margin-inline-end:7px;flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#d99a4e"/><circle cx="19.5" cy="4.5" r="4.6" fill="#fff"/><circle cx="22.5" cy="9.5" r="3" fill="#fff"/><circle cx="8" cy="8.5" r="1.6" fill="#6b4420"/><circle cx="13.5" cy="11" r="1.2" fill="#6b4420"/><circle cx="9" cy="14.5" r="1.4" fill="#6b4420"/><circle cx="14.5" cy="16" r="1.1" fill="#6b4420"/><circle cx="6.5" cy="12" r="0.9" fill="#6b4420"/></svg>' +
+      'אתר זה משתמש בעוגיות (Cookies) כדי לשפר את חוויית הגלישה שלכם ושלכן. <a href="privacy.html">מדיניות פרטיות</a></p>' +
+      '<div class="cookie-btns"><button class="cookie-accept" type="button">מאשר/ת</button><button class="cookie-reject" type="button">ביטול</button></div>';
+    document.body.appendChild(cookieBanner);
+    var COOKIE_KEY = "shekel-cookie-consent";
+    var closeCookie = function (val) {
+      try { localStorage.setItem(COOKIE_KEY, val); } catch (e) {}
+      cookieBanner.classList.remove("show");
+    };
+    cookieBanner.querySelector(".cookie-accept").addEventListener("click", function () { closeCookie("accepted"); });
+    cookieBanner.querySelector(".cookie-reject").addEventListener("click", function () { closeCookie("rejected"); });
+    var cookieConsent = null;
+    try { cookieConsent = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+    if (!cookieConsent) { setTimeout(function () { cookieBanner.classList.add("show"); }, 800); }
+  }
 })();
