@@ -478,113 +478,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; color: var(--
 /* Render the (blue) OMBee logo as solid white for the dark footer. */
 .footer__credit-logo img { height: 24px; width: auto; display: block; filter: brightness(0) invert(1); }
 
-/* =========================================================
-   Accessibility toolbar
-   ========================================================= */
-.a11y-toggle {
-  position: fixed; inset-block-end: 24px; inset-inline-start: 24px; z-index: 300;
-  width: 58px; height: 58px; border-radius: 16px;
-  background: var(--brand-600); color: #fff; display: grid; place-items: center;
-  box-shadow: 0 12px 30px rgba(13,115,119,.4); transition: transform .2s ease, background-color .2s ease;
-}
-.a11y-toggle:hover { transform: scale(1.08); background: var(--brand-500); }
-.a11y-toggle svg { width: 30px; height: 30px; fill: currentColor; }
-
-.a11y-panel {
-  position: fixed; inset-block-end: 94px; inset-inline-start: 24px; z-index: 300;
-  width: min(360px, calc(100vw - 32px)); max-height: min(82vh, 660px); overflow-y: auto;
-  background: #fff; color: var(--ink);
-  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--line);
-  padding: 18px; animation: a11yIn .25s ease;
-}
-@keyframes a11yIn { from { opacity: 0; transform: translateY(14px); } }
-.a11y-panel[hidden] { display: none; }
-.a11y-panel__head { display: flex; align-items: center; justify-content: space-between; margin-block-end: 14px; }
-.a11y-panel__head h2 { font-size: 1.2rem; display: inline-flex; align-items: center; gap: 8px; color: var(--brand-600); }
-.a11y-panel__close { font-size: 1.7rem; line-height: 1; width: 36px; height: 36px; border-radius: 10px; color: var(--muted); }
-.a11y-panel__close:hover { background: var(--line-2); color: var(--ink); }
-
-/* font-size stepper */
-.a11y-stepper { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--brand-50); border: 1px solid var(--brand-100); border-radius: 14px; padding: 9px 14px; margin-block-end: 12px; }
-.a11y-stepper__label { font-family: var(--font-head); font-weight: 600; font-size: .95rem; color: var(--ink-2); }
-.a11y-stepper__ctrls { display: flex; align-items: center; gap: 8px; }
-.a11y-step-btn { width: 38px; height: 38px; border-radius: 10px; background: #fff; border: 1.5px solid var(--brand-100); font-family: var(--font-head); font-weight: 700; color: var(--brand-700); transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
-.a11y-step-btn:hover { background: var(--brand-600); border-color: var(--brand-600); color: #fff; }
-.a11y-stepper__val { min-width: 46px; text-align: center; font-family: var(--font-head); font-weight: 700; font-size: .9rem; color: var(--brand-700); }
-
-/* grid of toggle tiles */
-.a11y-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.a11y-tile {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-  min-height: 86px; padding: 12px 6px; border: 1.5px solid var(--line); border-radius: 13px;
-  background: #fff; color: var(--ink-2); text-align: center;
-  font-family: var(--font-head); font-weight: 600; font-size: .82rem; line-height: 1.2;
-  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .12s ease;
-}
-.a11y-tile:hover { border-color: var(--brand-500); background: var(--brand-50); transform: translateY(-1px); }
-.a11y-tile__ico { width: 26px; height: 26px; flex-shrink: 0; }
-.a11y-tile[aria-pressed="true"] { background: var(--brand-600); border-color: var(--brand-600); color: #fff; box-shadow: 0 6px 16px rgba(15,125,112,.3); }
-
-/* reset + policy links */
-.a11y-reset-all { width: 100%; margin-block-start: 12px; padding: 13px; border-radius: 13px; background: var(--coral-600); color: #fff; font-family: var(--font-head); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: filter .2s ease, transform .12s ease; }
-.a11y-reset-all:hover { filter: brightness(.94); transform: translateY(-1px); }
-.a11y-links { display: flex; gap: 8px; margin-block-start: 12px; }
-.a11y-links a { flex: 1; text-align: center; padding: 10px; border-radius: 11px; background: var(--cream); border: 1px solid var(--line); font-weight: 600; font-size: .9rem; color: var(--brand-700); transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
-.a11y-links a:hover { background: var(--brand-600); color: #fff; border-color: var(--brand-600); }
-
-/* ---------- Accessibility modes (applied to <html>) ---------- */
-html.a11y-contrast { --cream: #ffffff; --cream-2: #f0f0f0; --muted: #2b3b42; --line: #1a2b33; }
-html.a11y-contrast body { background: #fff; }
-html.a11y-contrast .section-sub,
-html.a11y-contrast .about__text,
-html.a11y-contrast .prog-card p,
-html.a11y-contrast .news-card__body p,
-html.a11y-contrast .biz-card__body p { color: #1a2b33; }
-html.a11y-contrast .prog-card,
-html.a11y-contrast .news-card,
-html.a11y-contrast .biz-card { border-color: #1a2b33; }
-
-html.a11y-links a:not(.btn):not(.logo) { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; font-weight: 600; }
-
-html.a11y-readable { --font-head: Arial, "Heebo", sans-serif; --font-body: Arial, "Heebo", sans-serif; }
-html.a11y-readable body { letter-spacing: .02em; word-spacing: .08em; line-height: 1.85; }
-
-html.a11y-no-motion *,
-html.a11y-no-motion *::before,
-html.a11y-no-motion *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-
-/* grayscale — applied to content only (not the widget) to keep fixed/sticky safe.
-   The header grayscales on desktop only, where its nav is not a fixed drawer. */
-html.a11y-grayscale .topbar,
-html.a11y-grayscale main,
-html.a11y-grayscale .site-footer { filter: grayscale(100%); }
-@media (min-width: 1025px) { html.a11y-grayscale .site-header { filter: grayscale(100%); } }
-
-/* highlight headings */
-html.a11y-headings h1, html.a11y-headings h2, html.a11y-headings h3, html.a11y-headings h4 {
-  outline: 2px dashed var(--coral-600); outline-offset: 4px;
-  background: rgba(242,103,74,.07); border-radius: 4px;
-}
-
-/* increased line height */
-html.a11y-line body, html.a11y-line p, html.a11y-line li { line-height: 2.1 !important; }
-
-/* increased letter / word spacing */
-html.a11y-spacing body { letter-spacing: .09em; word-spacing: .16em; }
-
-/* hide content images (logos stay visible) */
-html.a11y-images img:not(.logo__img) { visibility: hidden; }
-html.a11y-images .footer__credit-logo img { visibility: visible; }
-
-/* enlarged cursor */
-html.a11y-cursor, html.a11y-cursor * {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M6 2 L6 30 L13 23 L17.5 33 L22 31 L17.5 21 L28 21 Z' fill='%23111111' stroke='%23ffffff' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") 6 2, auto !important;
-}
-
-/* text alignment */
-html.a11y-align-right main, html.a11y-align-right .topbar { text-align: right !important; }
-html.a11y-align-center main { text-align: center !important; }
-html.a11y-align-left main { text-align: left !important; }
+/* Accessibility widget (button + panel + feature CSS) is self-contained in js/accessibility.js */
 
 /* =========================================================
    Scroll reveal
@@ -692,7 +586,6 @@ html.a11y-align-left main { text-align: left !important; }
   .logo__tag { display: none; }
   .newsletter__form { grid-template-columns: 1fr; }
   .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
-  .a11y-toggle { inset-block-end: 16px; inset-inline-start: 16px; }
 }
 
 /* =========================================================

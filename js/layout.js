@@ -206,9 +206,7 @@
   var footerMount = document.getElementById("site-footer");
   if (footerMount) footerMount.outerHTML = FOOTER;
 
-  var a11yWrap = document.createElement("div");
-  a11yWrap.innerHTML = A11Y;
-  while (a11yWrap.firstChild) document.body.appendChild(a11yWrap.firstChild);
+  /* accessibility widget is injected by the self-contained js/accessibility.js */
 
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
