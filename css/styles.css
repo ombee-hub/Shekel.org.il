@@ -415,9 +415,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; color: var(--
 .donate__amounts { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-lg); padding: 28px; backdrop-filter: blur(6px); }
 .donate__amounts-title { display: block; font-family: var(--font-head); font-weight: 600; margin-block-end: 16px; font-size: 1.05rem; }
 .donate__chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.amount-chip { background: rgba(255,255,255,.16); border: 1.5px solid rgba(255,255,255,.4); color: #fff; font-family: var(--font-head); font-weight: 700; padding: 12px 20px; border-radius: 14px; transition: transform .15s ease, background-color .2s ease, color .2s ease; }
-.amount-chip:hover { background: #fff; color: var(--coral-600); transform: translateY(-2px); }
-.amount-chip--featured { background: #fff; color: var(--coral-600); position: relative; }
+.amount-chip { background: #fff; border: 1.5px solid var(--coral-400); color: var(--coral-600); font-family: var(--font-head); font-weight: 700; padding: 12px 20px; border-radius: 14px; transition: transform .15s ease, background-color .2s ease, color .2s ease, border-color .2s ease; }
+.amount-chip:hover { background: var(--coral-600); color: #fff; border-color: var(--coral-600); transform: translateY(-2px); }
+.amount-chip--featured { background: var(--coral-600); color: #fff; border-color: var(--coral-600); position: relative; }
 .amount-chip--featured::after { content: "פופולרי"; position: absolute; inset-block-start: -10px; inset-inline-end: -6px; background: var(--amber); color: #5a3d00; font-size: .6rem; padding: 2px 8px; border-radius: 999px; }
 .donate__note { margin-block-start: 18px; font-size: .85rem; color: rgba(255,255,255,.85); }
 

@@ -49,10 +49,10 @@ Shekel/
 ├── images/             # הלוגו והתמונות (מהאתר הרשמי)
 │   ├── logo.svg                       # הלוגו הרשמי (וקטורי)
 │   ├── housing / employment / emotional / children / banner-idf
-│   │   / accessibility / international .jpg   # תמונות לתחומי הפעילות
-│   ├── leisure.jpg                    # תמונת ה-Hero
-│   ├── biz-gifts / biz-metsion / biz-studio .jpg   # לוגואים של העסקים החברתיים
-│   └── iso9001.jpg, midot-seal.png    # תוויות אמון
+│   │   / accessibility / international .webp   # תמונות לתחומי הפעילות
+│   ├── leisure.webp                    # תמונת ה-Hero
+│   ├── biz-gifts / biz-metsion / biz-studio .webp   # לוגואים של העסקים החברתיים
+│   └── iso9001.webp, midot-seal.webp    # תוויות אמון
 └── README.md
 ```
 
